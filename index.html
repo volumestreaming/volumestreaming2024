@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Volume Streaming 2024</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-color: #000;
+            color: rgb(255, 255, 255);
+            font-family: monospace;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .coming-soon {
+            font-size: 24px;
+            text-shadow: 0 0 20px #ff00de, 0 0 30px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 60px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 20px #ff00de, 0 0 30px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 60px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de;
+            }
+            to {
+                text-shadow: 0 0 30px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 60px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 90px #ff00de;
+            }
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+            flex-wrap: wrap;
+            position: relative;
+        }
+        .pool {
+            width: 80px;
+            height: 80px;
+            border: 2px solid rgb(223, 255, 193);
+            border-radius: 50%;
+            margin: 10px;
+            position: relative;
+            z-index: 1;
+        }
+        .stream {
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(to right, rgba(152, 255, 234, 0.8), rgba(152, 255, 234, 0.2), rgba(152, 255, 234, 0.8));
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            z-index: 0;
+            animation: flow 4s linear infinite;
+        }
+        .icon {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .cell {
+            background: linear-gradient(45deg, #0f0, #00f);
+        }
+        .laptop {
+            background: linear-gradient(45deg, #f00, #ff0);
+        }
+        .vr {
+            background: linear-gradient(45deg, #f0f, #0ff);
+        }
+        @keyframes flow {
+            0% {
+                transform: translateY(-50%) translateX(-100%);
+            }
+            100% {
+                transform: translateY(-50%) translateX(100%);
+            }
+        }
+        @media screen and (min-width: 768px) {
+            .coming-soon {
+                font-size: 32px;
+            }
+            .pool {
+                width: 100px;
+                height: 100px;
+                margin: 0 20px;
+            }
+            .icon {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="stream"></div>
+        <div class="pool">
+            <div class="icon cell"></div>
+        </div>
+        <div class="pool">
+            <div class="icon laptop"></div>
+        </div>
+        <div class="pool">
+            <div class="icon vr"></div>
+        </div>
+    </div>
+    <h1 class="coming-soon">COMING SOON</h1>
+    <h1>Volume Streaming</h1>
+</body>
+</html>
